@@ -14,8 +14,14 @@ public class Subclass extends Superclass{
 	
 	public Subclass (int a, int b)
 	{
-		super(4,'t',90.66);
 		System.out.println("Subclass 2 argument");
+		
+	}
+		
+		public Subclass (int a, int b, int c)
+		{
+			super(4,'t',90.66);
+			System.out.println("Subclass 2 argument");
 	}
 
 	public static void main(String[] args) 
