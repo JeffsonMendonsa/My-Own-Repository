@@ -1,6 +1,6 @@
 package pract;
 
-public class Grandchild extends Subclass {
+public class Grandchild {
 	
 	public Grandchild()
 	{
@@ -11,7 +11,7 @@ public class Grandchild extends Subclass {
 	
 	public Grandchild(int a)
 	{
-		super(6);
+//		super(6);
 		System.out.println("Grandchild 1 arg");
 	}
 	
