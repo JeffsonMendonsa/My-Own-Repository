@@ -3,9 +3,9 @@ package testModifiers;
 public class Public1 {
 	
 	static int a = 45;
-	int b = 55;
+	public int b = 55;
 	
-	public static void meth()
+	protected static void meth()
 	{
 		System.out.println("meth");
 		
