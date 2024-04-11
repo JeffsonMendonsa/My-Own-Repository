@@ -1,6 +1,6 @@
 package testModifiers;
 
-public class Public {
+public class Public1 {
 	
 	static int a = 45;
 	
@@ -8,7 +8,10 @@ public class Public {
 	{
 		System.out.println("meth");
 	}
-
+	public static void main(String[] args) {
+		meth();
+		System.out.println(Public1.a);
+	}
 	
 	
 	
