@@ -70,6 +70,16 @@ public class trial1 {
 		System.out.println(fv);
 	}
 	
+	public static void gang ()
+	{
+		System.out.println(69);
+	}
+	
+	public void sang()
+	{
+		System.out.println("sang");
+	}
+	
 
 	
 }

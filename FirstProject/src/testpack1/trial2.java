@@ -1,6 +1,6 @@
 package testpack1;
 
-public class trial2 {
+public class trial2 extends trial1{
 	
 	public trial2()
 	{
@@ -20,6 +20,20 @@ public class trial2 {
 		System.out.print(red.bbb);
 		System.out.println();
 		System.out.println(abd);
+		
+		trial1 sung = new trial1();
+		sung.sang();
+		trial1.gang();
+		
+		trial1 jj = new trial1();
+		jj.sang();
+		
+		trial1 ll = new trial2();
+		jj.sang();
+		
+		trial2 tt = new trial2();
+		jj.sang();
+		
 	}
 	
 	static int aaa = 555;
@@ -28,6 +42,7 @@ public class trial2 {
 	double ccc;
 	
 	static String abd = "qqqqqq";
+	
 	
 	
 }
