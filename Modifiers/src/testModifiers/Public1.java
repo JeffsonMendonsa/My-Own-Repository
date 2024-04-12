@@ -21,9 +21,20 @@ public class Public1 {
 		System.out.println(Public1.a);
 	}
 	
+	public void seth(int a)
+	{
+		System.out.println("seth");
+	}
 	
+	public void seth(int a, char b)
+	{
+		System.out.println("seth");
+	}
 	
-	
+	public void seth(char a, int b)
+	{
+		System.out.println("seth");
+	}
 	
 	
 	
