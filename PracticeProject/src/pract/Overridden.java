@@ -31,6 +31,7 @@ public class Overridden extends Overloaded{
 		Overloaded l1 = new Overridden();
 		l1.load();
 		o1.load(6);
+		o1.load(0, true);
 		
 		
 		
