@@ -29,6 +29,27 @@ public class trial1 {
 		
 		ryt();
 		
+		String s1 = "Hello String";
+		System.out.println(s1);
+		
+		String s2 = "hello string";
+				
+		System.out.println(s1.equalsIgnoreCase(s2));
+		
+		String truk = s1.replace('l', 'r');
+				System.out.println(truk);
+				
+			String rr =	s1.toUpperCase();
+			System.out.println(rr);
+			
+			System.out.println(s1.toLowerCase());
+			
+			String qw = "     trim";
+			System.out.println(qw.trim());
+			
+		
+		
+		
 	}
 	public static void look() {
 		System.out.println("First Static");

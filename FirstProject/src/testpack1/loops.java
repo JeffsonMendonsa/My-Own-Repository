@@ -50,7 +50,23 @@ public class loops {
 		while(n > 5);
 		System.out.println("ggg");
 	
-			
+		
+		int aa = 10;
+		int bb = 25;
+		
+		if(aa<bb)
+		{
+		System.out.println("if condition");
+		}
+		else if(aa==10)
+		{
+			System.out.println("else if condition");
+		}
+
+		else
+		{
+			System.out.println("else condition");
+		}
 		
 	}
 }

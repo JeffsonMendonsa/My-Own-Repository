@@ -1,6 +1,5 @@
 package pract;
 
-import testModifiers.Public1;
 
 public class Trial1 {
 	

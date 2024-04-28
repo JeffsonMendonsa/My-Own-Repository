@@ -6,6 +6,17 @@ public class newTest {
 	
 	public static void main(String[] args) {
 		
+		int age = 11;
+		boolean cond = (age==13);
+		
+		
+		if(cond){
+			System.out.println("yes");
+		}
+		else {
+			System.out.println("no");
+		}
+		
 		testclass1.east();
 		
 		testclass1 rest = new testclass1();
