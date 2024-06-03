@@ -17,6 +17,7 @@ public class newTest {
 			System.out.println("no");
 		}
 		
+		
 		testclass1.east();
 		
 		testclass1 rest = new testclass1();

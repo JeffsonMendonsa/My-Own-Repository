@@ -9,7 +9,7 @@ public class constructor {
 	
 	public constructor(int a, int b)
 	{
-		int c = a * b;
+		int c = a * b * b;
 		System.out.println(c);
 	}
 	
@@ -21,7 +21,7 @@ public class constructor {
 	
 	public constructor(int g, char h, double j)
 	{
-//		this(78,'o',9.8);
+		this(78,'o',9.8);
 		System.out.println("3 datatypes");
 	}
 	
@@ -30,7 +30,7 @@ public class constructor {
 
 		constructor a = new constructor();
 		
-		constructor b = new constructor(5,5);
+		constructor b = new constructor(5,7);
 		
 		constructor c = new constructor('t');
 		

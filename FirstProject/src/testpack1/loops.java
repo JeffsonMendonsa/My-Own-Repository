@@ -11,15 +11,15 @@ public class loops {
 		else
 			System.out.println("False");
 		
-		int [] array = new int[5];
+		int [] arrayexample = new int[5];
 		
-		array[0] = 50;
-		array[4] = 1000;
+		arrayexample[0] = 50;
+		arrayexample[4] = 1000;
 		
-		System.out.println(array[3]);
+		System.out.println(arrayexample[3]);
 		
 		int []troy = {509, 60, 788, 1000};
-		System.out.println(troy[2]);
+		System.out.println(troy[0]);
 		
 		int a = 45;
 		int b = 55;
