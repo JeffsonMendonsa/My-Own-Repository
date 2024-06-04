@@ -9,19 +9,19 @@ public class constructor {
 	
 	public constructor(int a, int b)
 	{
-		int c = a * b * b;
+		int c = a * b ;
 		System.out.println(c);
 	}
 	
 	public constructor(char w)
 	{
-		this(5,100);
+		this(2,4);
 		System.out.println("Character");
 	}
 	
 	public constructor(int g, char h, double j)
 	{
-		this(78,'o',9.8);
+		this();
 		System.out.println("3 datatypes");
 	}
 	
