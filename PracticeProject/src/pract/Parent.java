@@ -7,11 +7,11 @@ public class Parent {
 		System.out.println("Parent WITHOUT argument");
 	}
 		
-	public Parent(int a)
-	{
-		System.out.println("Parent 1 Argument: " + 65);
-		
-	}
+//	public Parent(int a)
+//	{
+//		System.out.println("Parent 1 Argument: " + 65);
+//		
+//	}
 
 	public Parent (int b , int t, int d)
 	{
@@ -36,16 +36,16 @@ public class Parent {
 
 //		Parent p1 = new Parent();
 		
-		Parent p2 = new Parent(54);
-		
-		Parent p3 = new Parent(5,2,1);
-	
-		yulerie();
-		
-		Parent cv = new Parent(6);
-		cv.India();
-		
-		System.out.println(a);
+//		Parent p2 = new Parent(54);
+//		
+//		Parent p3 = new Parent(5,2,1);
+//	
+//		yulerie();
+//		
+//		Parent cv = new Parent(6);
+//		cv.India();
+//		
+//		System.out.println(a);
 
 		
 	}

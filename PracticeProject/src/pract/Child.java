@@ -9,7 +9,7 @@ public class Child extends Parent{
 	
 	public Child(int a, int b)
 	{
-		super(5,4,3);
+//		super(5,4,3);
 		System.out.println("Child 2 argument");
 	}
 	
@@ -22,13 +22,13 @@ public class Child extends Parent{
 		
 		Child c2 = new Child(8,-6);
 		
-		yulerie();
-		
-		Parent uv = new Parent(7);
-		uv.India();
-		System.out.println(Child.f);
-		
-		Parent ui = new Child(5);
+//		yulerie();
+//		
+//		Parent uv = new Parent(7);
+//		uv.India();
+//		System.out.println(Child.f);
+//		
+//		Parent ui = new Child(5);
 		
 	}
 
