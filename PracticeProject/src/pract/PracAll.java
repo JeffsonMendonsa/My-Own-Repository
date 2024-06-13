@@ -1,10 +1,13 @@
 package pract;
 
-public class PracAll {
+public abstract class PracAll {
 	
-				public void p1()
+				public PracAll()
 				{
-					System.out.println("ParentCl Overloaded 0 arg");
+					System.out.println("Cons in abs class");
+				}
+				public abstract void p1();
+				{
 				}
 				
 				public void p1(int g)
@@ -12,7 +15,7 @@ public class PracAll {
 					System.out.println("ParentCl Overloaded 1 arg");
 				}
 				
-				public void p2(int u, double hn)
+				void p2(int u, double hn)
 				{
 					System.out.println("ParentCl Overloaded 2 arg");
 				}
@@ -20,6 +23,9 @@ public class PracAll {
 				public static void main(String[] args) {
 					
 //					Parent(44,66.55);
+					
+				
+					
 					
 					
 					
