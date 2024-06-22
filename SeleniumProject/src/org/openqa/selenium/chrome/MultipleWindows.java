@@ -74,8 +74,19 @@ public class MultipleWindows {
 		for(String SingleWindow : AllWindows)
 		{
 			System.out.println("Window " + win++ +":- " + SingleWindow);
+			drivers.switchTo().window(SingleWindow);
+
+//			if(!(SingleWindow.equals(ParentWindow)))
+//			{
+//				drivers.switchTo().window(SingleWindow);
+//			}
 		}
 		
+		
+		ArrayList<String>AllWins = new ArrayList<String>(AllWindows);
+		Thread.sleep(3000);
+		drivers.switchTo().window(AllWins.get(1));
+//		drivers.findElement(By.xpath("//*[@id='Form_submitForm_EmailHomePage']")).sendKeys("TEST");
 		
 		
 		
