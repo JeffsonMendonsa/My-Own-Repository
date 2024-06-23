@@ -42,7 +42,7 @@ public class MultipleWindows {
 //			if(!(SingleWindow.equals(ParentWindow)))
 //			{
 //				driver.switchTo().window(SingleWindow);
-//				System.out.println("Window" + abc+  ": " +  SingleWindow);
+//				System.out.println("Window" + abc +  ": " +  SingleWindow);
 //				abc++;
 //			}
 //		}
@@ -52,6 +52,8 @@ public class MultipleWindows {
 ////		ArrayWindows.get(1);
 //		driver.switchTo().window(ArrayWindows.get(1));
 //		driver.findElement(By.xpath("(//button[@class='btn btn-ohrm btn-free-demo'])[2]")).click();
+		
+		
 		int win = 1;
 		WebDriver drivers = new ChromeDriver();
 		drivers.manage().window().maximize();
@@ -65,17 +67,31 @@ public class MultipleWindows {
 		Thread.sleep(4000);
 		
 		drivers.findElement(By.xpath("//a[text()='OrangeHRM, Inc']")).click();
+		Thread.sleep(2000);
 		drivers.findElement(By.xpath("//a[text()='OrangeHRM, Inc']")).click();
+		Thread.sleep(2000);
 		drivers.findElement(By.xpath("//a[text()='OrangeHRM, Inc']")).click();
+		
 		
 		Set<String> AllWindows = drivers.getWindowHandles();
 //		System.out.println("All Windows:- "  + AllWindows);
 		
+//		ArrayList<String>AllWins = new ArrayList<String>(AllWindows);
+		Thread.sleep(3000);
+		int countnum = 0;
 		for(String SingleWindow : AllWindows)
 		{
 			System.out.println("Window " + win++ +":- " + SingleWindow);
 			drivers.switchTo().window(SingleWindow);
-
+//			drivers.switchTo().window(AllWins.get(1));
+			if(countnum == 0)
+			{
+				countnum++;
+				continue;
+				
+			}
+			drivers.findElement(By.xpath("//*[@id='Form_submitForm_EmailHomePage']")).sendKeys("TEST" + countnum);
+			countnum++;
 //			if(!(SingleWindow.equals(ParentWindow)))
 //			{
 //				drivers.switchTo().window(SingleWindow);
@@ -83,10 +99,8 @@ public class MultipleWindows {
 		}
 		
 		
-		ArrayList<String>AllWins = new ArrayList<String>(AllWindows);
-		Thread.sleep(3000);
-		drivers.switchTo().window(AllWins.get(1));
-//		drivers.findElement(By.xpath("//*[@id='Form_submitForm_EmailHomePage']")).sendKeys("TEST");
+		
+		
 		
 		
 		
