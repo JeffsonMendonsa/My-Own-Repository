@@ -47,6 +47,8 @@ public class MultipleWindows2 {
 //		}
 		
 //		ArrayList<String>Wins = new ArrayList<String>(AllWindows);
+//		int NumOfWind = Wins.size();
+		
 ////		driver.switchTo().window(Wins.get(1));
 //		int we = 0;
 //		
@@ -63,9 +65,23 @@ public class MultipleWindows2 {
 //			driver.findElement(By.xpath("//*[@id='Form_submitForm_EmailHomePage']")).sendKeys("Test" + we++);
 //			Thread.sleep(3000);
 //		}
-			
-		String [] StringWin = new String[5];
-		System.out.println(StringWin[2]);
+			int edge = 0;
+			int tef = 1;
+		String [] StringWin = new String[NumOfWindows];
+//		System.out.println(StringWin[2]);
+		
+		for(String ee : AllWindows)
+		{
+			StringWin[edge] = ee;
+			System.out.println("Window"+ tef++ + ":- " +StringWin[edge]);
+			edge++;
+		} 
+		String WindowToSwitch = StringWin[2];
+		driver.switchTo().window(WindowToSwitch);
+		Thread.sleep(4000);
+		driver.findElement(By.xpath("//*[@id='Form_submitForm_EmailHomePage']")).sendKeys("Test" + tef++);
+		
+		
 		
 		
 		
