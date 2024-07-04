@@ -23,30 +23,30 @@ public class IFrames {
 		driver.switchTo().frame(Frame4);
 		
 		driver.findElement(By.xpath("//input[@name='mytext4']")).sendKeys("1st switch Successful");
-		System.out.println("1st Iframe done");
+		System.out.println("Frame 4 done");
 		
 		
 		driver.switchTo().defaultContent();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		WebElement Frame1 = driver.findElement(By.xpath("//frame[@src='frame_1.html']"));
 		
 		driver.switchTo().frame(Frame1);
 		
 		driver.findElement(By.xpath("//form[@name='name1']//input[@type='text']")).sendKeys("2nd switch Successful");
-		System.out.println("2nd Iframe done");
+		System.out.println("Frame 1 done");
 		
 		
 		driver.switchTo().defaultContent();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		WebElement Frame2 = driver.findElement(By.xpath("//frame[@src='frame_2.html']"));
 		driver.switchTo().frame(Frame2);
 		
 		driver.findElement(By.xpath("//input[@name='mytext2']")).sendKeys("3rd switch Successful");
-		System.out.println("3rd Iframe done");
+		System.out.println("Frame 2 done");
 		
 		
 		driver.switchTo().defaultContent();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		
 		WebElement Frame3 = driver.findElement(By.xpath("//frame[@src='frame_3.html']"));
 		driver.switchTo().frame(Frame3);
@@ -57,14 +57,15 @@ public class IFrames {
 		WebElement iAmHuman = driver.findElement(By.xpath("//span[text()='I am a human']"));
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView();",iAmHuman);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		iAmHuman.click();
-		System.out.println("4th Iframe done");
+		System.out.println("Frame 3 done");
 		Thread.sleep(2000);
 		
 		WebElement General = driver.findElement(By.xpath("//span[text()='General Web Automation']")); Thread.sleep(2000);
 		JavascriptExecutor js1 = (JavascriptExecutor)driver;
 		js1.executeScript("arguments[0].scrollIntoView();",General);
+		Thread.sleep(2000);
 		General.click();
 		
 		driver.findElement(By.xpath("//span[text()='Choose']")).click(); 
@@ -74,6 +75,10 @@ public class IFrames {
 		
 		WebElement Next = driver.findElement(By.xpath("//span[text()='Next']"));
 		Next.click();
+		
+		driver.switchTo().parentFrame();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@name='mytext3']")).sendKeys("done");
 		
 		
 		
