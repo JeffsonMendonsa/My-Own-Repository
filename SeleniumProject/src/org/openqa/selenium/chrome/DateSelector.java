@@ -36,7 +36,7 @@ public class DateSelector {
 			WebElement MonthYear = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']"));
 //			String MonthYearText = MonthYear.getText();
 			
-			if(!MonthYear.getText().equals("November 2020"))
+			if(!MonthYear.getText().equals("November 2015"))
 				Previous.click();
 			else
 				
@@ -49,6 +49,7 @@ public class DateSelector {
 			
 		}
 		
+		Thread.sleep(5000);
 		
 		WebElement Trialdate = driver.findElement(By.xpath("//a[text()='24']"));
 		Trialdate.click();

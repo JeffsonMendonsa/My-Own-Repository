@@ -15,14 +15,14 @@ public class IFrames {
 		// TODO Auto-generated method stub
 
 		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		driver.manage().window().minimize();
 		driver.get("https://ui.vision/demo/webtest/frames/");
 		Thread.sleep(3000);
 		
 		WebElement Frame4 = driver.findElement(By.xpath("//frame[@src='frame_4.html']"));
 		driver.switchTo().frame(Frame4);
 		
-		driver.findElement(By.xpath("//input[@name='mytext4']")).sendKeys("1st switch Successful");
+		driver.findElement(By.xpath("//input[@name='mytext4']")).sendKeys("Shree");
 		System.out.println("Frame 4 done");
 		
 		
