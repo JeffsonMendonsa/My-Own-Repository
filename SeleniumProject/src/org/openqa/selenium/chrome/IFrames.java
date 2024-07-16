@@ -1,28 +1,37 @@
 package org.openqa.selenium.chrome;
 
 import org.openqa.selenium.WebDriver;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.v121.emulation.model.SensorMetadata;
 import org.openqa.selenium.interactions.Actions;
 
+import com.google.common.io.Files;
+
 public class IFrames {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 
 		WebDriver driver = new ChromeDriver();
-		driver.manage().window().minimize();
+		driver.manage().window().maximize();
 		driver.get("https://ui.vision/demo/webtest/frames/");
 		Thread.sleep(3000);
 		
 		WebElement Frame4 = driver.findElement(By.xpath("//frame[@src='frame_4.html']"));
 		driver.switchTo().frame(Frame4);
 		
-		driver.findElement(By.xpath("//input[@name='mytext4']")).sendKeys("Shree");
+		driver.findElement(By.xpath("//input[@name='mytext4']")).sendKeys("1st switch Successful");
 		System.out.println("Frame 4 done");
 		
 		
@@ -60,6 +69,7 @@ public class IFrames {
 		Thread.sleep(2000);
 		iAmHuman.click();
 		System.out.println("Frame 3 done");
+		System.out.println();
 		Thread.sleep(2000);
 		
 		WebElement General = driver.findElement(By.xpath("//span[text()='General Web Automation']")); Thread.sleep(2000);
@@ -78,7 +88,26 @@ public class IFrames {
 		
 		driver.switchTo().parentFrame();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@name='mytext3']")).sendKeys("done");
+		
+//		WebElement LastOne = driver.findElement(By.xpath("//input[name='mytext3']"));
+		List<WebElement> ListOfLastOne = driver.findElements(By.xpath("//input[name='mytext3']"));
+		int SizeOfList = ListOfLastOne.size();
+		System.out.println("Size of the list is: " + SizeOfList);
+	
+		
+		if(SizeOfList > 0)
+		{
+			ListOfLastOne.get(0).click();
+		}
+		else
+		{
+			TakesScreenshot screen = (TakesScreenshot)driver;
+		  	 File TakeSS = screen.getScreenshotAs(OutputType.FILE);
+		  	 File Path = new File("C:\\Jeffson\\Testing\\Test Screenshots\\First Tests SS.png");
+		  	 Files.copy(TakeSS, Path);
+		}
+		
+		
 		
 		
 		

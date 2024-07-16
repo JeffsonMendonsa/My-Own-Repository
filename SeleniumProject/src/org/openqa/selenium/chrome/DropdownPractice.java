@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.v121.emulation.model.SensorMetadata;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 public class DropdownPractice {
 
@@ -22,10 +23,33 @@ public class DropdownPractice {
 
 		driver.get("https://the-internet.herokuapp.com/dropdown");
 		
-		driver.findElement(By.xpath("//select//option[@value='AFG']")).click();
+//		WebElement DropButton = driver.findElement(By.id("dropdown"));
+//		DropButton.click();
 		
-//		WebElement
+//		 List<WebElement> AllDropButtons = driver.findElements(By.xpath("//select[@id='dropdown']//option"));
+		 
+//		 for(WebElement Single : AllDropButtons)
+//		 {
+//			 String display = Single.getText();
+//			 System.out.println(display);
+//			 
+//			 if(display.equals("Option 1"))
+//			 {
+//				 Single.click();
+//			 }
+//			 
+//			 
+//		
+//			 
+//		
+//			 
+//		 }
 		
+	
+		 WebElement SelOption = driver.findElement(By.xpath("//select[@id='dropdown']"));
+		 Select newSelOption = new Select(SelOption);
+		 newSelOption.selectByIndex(0);
+		 
 		
 		
 		
