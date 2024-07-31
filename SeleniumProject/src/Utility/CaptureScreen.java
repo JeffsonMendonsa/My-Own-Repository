@@ -3,9 +3,12 @@ package Utility;
 import java.io.File;
 import java.io.IOException;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.idealized.Javascript;
 
 import com.google.common.io.Files;
 
@@ -19,4 +22,17 @@ public class CaptureScreen {
 	  	 Files.copy(TakeSS, Path);
 	}
 
+	public static void ScrollJS(WebDriver driver, WebElement iamHuman)
+	{
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeAsyncScript("arguments[0].scrollIntoView();", iamHuman);
+		
+		
+	}
+	
+	
+	
+	
+	
+	
 }

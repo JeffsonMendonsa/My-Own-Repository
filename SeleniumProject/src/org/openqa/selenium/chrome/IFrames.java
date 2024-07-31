@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -17,6 +18,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.v121.emulation.model.SensorMetadata;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
 
@@ -28,6 +31,7 @@ public class IFrames  {
 		// TODO Auto-generated method stub
 
 		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
 		driver.manage().window().maximize();
 		driver.get("https://ui.vision/demo/webtest/frames/");
 		Thread.sleep(3000);
@@ -77,6 +81,8 @@ public class IFrames  {
 		js.executeScript("arguments[0].scrollIntoView();",iAmHuman);
 		Thread.sleep(2000);
 		iAmHuman.click();
+		boolean abc = iAmHuman.isEnabled();
+		System.out.println("The checkbox is enabled - " + abc);
 		System.out.println("Frame 3 done");
 		System.out.println();
 		Thread.sleep(2000);
@@ -132,14 +138,17 @@ public class IFrames  {
 		}
 		
 		
-		 
 		ZonedDateTime Dt = ZonedDateTime.now();
-		DateTimeFormatter TimeFormatter = DateTimeFormatter.ofPattern("dd_momo_yyyy_hh_mm_ss");
+		DateTimeFormatter TimeFormatter = DateTimeFormatter.ofPattern("dd_MM_YYYY_hh_mm_ss");
 		String DateTime = Dt.format(TimeFormatter);
 		
 		CaptureScreen.ScreenshotMethod(driver, "TestSceenA" + DateTime);
 		
+		System.out.println(DateTime);
 		
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.alertIsPresent());
 		
 		
 		
