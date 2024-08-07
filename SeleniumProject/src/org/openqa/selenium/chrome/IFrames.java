@@ -131,10 +131,7 @@ public class IFrames  {
 		}
 		else
 		{
-			TakesScreenshot screen = (TakesScreenshot)driver;
-		  	 File TakeSS = screen.getScreenshotAs(OutputType.FILE);
-		  	 File Path = new File("C:\\Jeffson\\Testing\\Test Screenshots\\First Tests SS.png");
-		  	 Files.copy(TakeSS, Path);
+			CaptureScreen.ScreenshotMethod(driver, "Test 123");
 		}
 		
 		
