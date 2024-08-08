@@ -70,7 +70,7 @@ public class PracticeAll {
 			
 			TakesScreenshot ss = (TakesScreenshot)driver;
 			File ss1 = ss.getScreenshotAs(OutputType.FILE);
-			File Path = new File("C:\\Jeffson\\Testing\\Test Screenshots\\.PRACALL" + Formatter + ".png");
+			File Path = new File("C:\\Jeffson\\Testing\\Test Screenshots\\.PRACALL " + Formatter + ".png");
 			Files.copy(ss1, Path);
 			}
 		 

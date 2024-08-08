@@ -74,13 +74,22 @@ public class loops {
 			System.out.println("***");
 			
 			
-			if(century == 10) {
-			break;
-			}	
+//			if(century == 10) {
+//			break;
+//			}	
 			}
 			
-		
-		
+		for(int cen=1 ; cen <=4 ; cen++)
+		{
+			
+			for(int den = 1 ; den<=cen ; den++)
+			{
+				System.out.print("*");
+				
+			}
+			System.out.println();
+	
+		}
 		
 		
 		
